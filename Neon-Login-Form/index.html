@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Neon Login | Hossein Yadegarnia</title>
+    <link rel="shortcut icon" href="Assest/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <center>
+        <form action="#" method="post">
+            <div class="login" id="login">
+                <h1>Login :)</h1>
+                <label for="username">Username: </label>
+                <input type="text" id="username" placeholder="Enter The Username... " oninvalid='this.setCustomValidity("Please Enter The Username :/");' oninput='this.setCustomValidity("")' required>
+                <label for="password">Password: </label>
+                <input type="password" id="password" placeholder="Enter The Password... " oninvalid='this.setCustomValidity("Please Enter The Password :/");' oninput='this.setCustomValidity("")' required>
+                <a onclick="visiblePassword()" id="vispass">Show Password🔒🔑</a>
+                <hr>
+                <a onclick="forgetPassword()" style="margin-top: 5px;">Forget The Password?</a>
+                <div class="check-box">
+                    <label for="remember">Remember Me</label>
+                    <input type="checkbox" id="remember" name="remember" value="remember me">
+                </div>
+                <button class="btn-submit">
+                    Login
+                </button>
+                <center><button class="google">
+                    <svg xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid" viewBox="0 0 256 262">
+                    <path fill="#4285F4" d="M255.878 133.451c0-10.734-.871-18.567-2.756-26.69H130.55v48.448h71.947c-1.45 12.04-9.283 30.172-26.69 42.356l-.244 1.622 38.755 30.023 2.685.268c24.659-22.774 38.875-56.282 38.875-96.027"></path>
+                    <path fill="#34A853" d="M130.55 261.1c35.248 0 64.839-11.605 86.453-31.622l-41.196-31.913c-11.024 7.688-25.82 13.055-45.257 13.055-34.523 0-63.824-22.773-74.269-54.25l-1.531.13-40.298 31.187-.527 1.465C35.393 231.798 79.49 261.1 130.55 261.1"></path>
+                    <path fill="#FBBC05" d="M56.281 156.37c-2.756-8.123-4.351-16.827-4.351-25.82 0-8.994 1.595-17.697 4.206-25.82l-.073-1.73L15.26 71.312l-1.335.635C5.077 89.644 0 109.517 0 130.55s5.077 40.905 13.925 58.602l42.356-32.782"></path>
+                    <path fill="#EB4335" d="M130.55 50.479c24.514 0 41.05 10.589 50.479 19.438l36.844-35.974C195.245 12.91 165.798 0 130.55 0 79.49 0 35.393 29.301 13.925 71.947l42.211 32.783c10.59-31.477 39.891-54.251 74.414-54.251"></path>
+                  </svg>
+                    Continue with Google
+                  </button></center>
+            </div>
+            <!-- ============== -->
+            <div class="signup" id="signup">
+                <h1>SignUp :)</h1>
+                <label for="username">Username: </label>
+                <input type="text" id="username" placeholder="Enter The Username... " oninvalid='this.setCustomValidity("Please Enter The Username :/");' oninput='this.setCustomValidity("")' required>
+                <label for="password">Password: </label>
+                <input type="password" id="s-password" placeholder="Enter The Password... " oninvalid='this.setCustomValidity("Please Enter The Password :/");' oninput='this.setCustomValidity("")' required>
+                
+                <label for="password">Repeat Password: </label>
+                <input type="password" id="r-password" placeholder="Enter The Password Again... " oninvalid='this.setCustomValidity("Please Enter The Repeat Password :/");' oninput='this.setCustomValidity("")' required>
+
+                <a onclick="visiblePassword()" id="vispass">Show Password🔒🔑</a>
+                <hr>
+                <div class="check-box">
+                    <label for="accespt">Accespt The Privacy & Policy</label>
+                    <input type="checkbox" id="accespt" name="accespt" value="accespt the privacy & policy" onchange="privacy_accespt()">
+                </div>
+                <button class="btn-submit" id="btn-signup" style="display: none;">
+                    SignUp
+                </button>
+                <button class="btn-submit" id="btn-signup-disable" disabled style="opacity: 0.7;">
+                    SignUp
+                </button>
+                <center><button class="google">
+                    <svg xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid" viewBox="0 0 256 262">
+                    <path fill="#4285F4" d="M255.878 133.451c0-10.734-.871-18.567-2.756-26.69H130.55v48.448h71.947c-1.45 12.04-9.283 30.172-26.69 42.356l-.244 1.622 38.755 30.023 2.685.268c24.659-22.774 38.875-56.282 38.875-96.027"></path>
+                    <path fill="#34A853" d="M130.55 261.1c35.248 0 64.839-11.605 86.453-31.622l-41.196-31.913c-11.024 7.688-25.82 13.055-45.257 13.055-34.523 0-63.824-22.773-74.269-54.25l-1.531.13-40.298 31.187-.527 1.465C35.393 231.798 79.49 261.1 130.55 261.1"></path>
+                    <path fill="#FBBC05" d="M56.281 156.37c-2.756-8.123-4.351-16.827-4.351-25.82 0-8.994 1.595-17.697 4.206-25.82l-.073-1.73L15.26 71.312l-1.335.635C5.077 89.644 0 109.517 0 130.55s5.077 40.905 13.925 58.602l42.356-32.782"></path>
+                    <path fill="#EB4335" d="M130.55 50.479c24.514 0 41.05 10.589 50.479 19.438l36.844-35.974C195.245 12.91 165.798 0 130.55 0 79.49 0 35.393 29.301 13.925 71.947l42.211 32.783c10.59-31.477 39.891-54.251 74.414-54.251"></path>
+                  </svg>
+                    Continue with Google
+                  </button></center>
+            </div>
+
+            <div class="forget-pass" id="forget-pass">
+                <h2>Forget Password? </h2>
+                <label for="res">Enter Your Username/Email for send Link</label>
+                <input type="email" id="res" placeholder="Enter The Username/Enail: " oninvalid='this.setCustomValidity("Please Enter The Username/Email :/");' oninput='this.setCustomValidity("")' required>
+                <button class="btn-submit" type="submit">Submit</button>
+                <a onclick="showLogin()">Back To Login🙂</a>
+                <br>
+                <p>
+                    We will send you an email containing a link to recover and change your password. If you did not receive the email, check the spam folder.📰
+                </p>
+            </div>
+
+
+            <div class="wallpaper">
+                <h1>Neon Login</h1>
+                <br>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores est explicabo nemo neque vero nobis facere, ipsa deserunt. Reiciendis nostrum corrupti rem eligendi, distinctio quos culpa rerum quam repellat odio?Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam, commodi officia! Quasi ducimus ullam at placeat consequatur soluta eius, explicabo excepturi corrupti ea modi qui quos iure praesentium est obcaecati.</p>
+                <br><br>
+                <button class="btn-change" onclick="change()" type="button">
+                    <span class="text" id="btn-change-text">Signup</span>
+                    <span class="blob"></span>
+                    <span class="blob"></span>
+                    <span class="blob"></span>
+                    <span class="blob"></span>
+                  </button>                  
+            </div>
+        </form>
+    </center>
+
+
+</body>
+
+<script src="app.js"></script>
+</html>
